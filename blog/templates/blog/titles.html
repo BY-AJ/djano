@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}blog title{% endblock %}
+
+{% block content %}
+    <div class="text-center">
+        <h1>我的博客</h1>
+    </div>
+
+    <div>
+        <ul>
+            {% for blog in blogs %}
+                <li><a href="{{blog.id}}">{{ blog.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
